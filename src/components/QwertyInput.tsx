@@ -4,7 +4,7 @@ import WordDescription from './WordDescription';
 function QwertyInput(): JSX.Element {
   const [text, setText] = useState('')
 
-  const addLetter = (letter: string) => {
+  const addCharacter = (letter: string) => {
     setText(text + letter);
     // better: setText(prev => prev + letter);
   }
@@ -24,16 +24,19 @@ function QwertyInput(): JSX.Element {
       <input
         value={text}
       />
-      <button onClick={() => addLetter('Q')}>Q</button>
-      <button onClick={() => addLetter('W')}>W</button>
-      <button onClick={() => addLetter('E')}>E</button>
-      <button onClick={() => addLetter('R')}>R</button>
-      <button onClick={() => addLetter('T')}>T</button>
-      <button onClick={() => addLetter('Y')}>Y</button>
-      <button onClick={() => addLetter('U')}>U</button>
-      <button onClick={() => addLetter('I')}>I</button>
-      <button onClick={() => addLetter('O')}>O</button>
-      <button onClick={() => addLetter('P')}>P</button>
+      <button onClick={() => addCharacter('Q')}>Q</button>
+      <button onClick={() => addCharacter('W')}>W</button>
+      <button onClick={() => addCharacter('E')}>E</button>
+      <button onClick={() => addCharacter('R')}>R</button>
+      <button onClick={() => addCharacter('T')}>T</button>
+      <button onClick={() => addCharacter('Y')}>Y</button>
+      <button onClick={() => addCharacter('U')}>U</button>
+      <button onClick={() => addCharacter('I')}>I</button>
+      <button onClick={() => addCharacter('O')}>O</button>
+      <button onClick={() => addCharacter('P')}>P</button>
+      <button onClick={() => addCharacter('?')}>?</button>
+      <button onClick={() => addCharacter('!')}>!</button>
+      <button onClick={() => addCharacter('£')}>£</button>
       <br />
       <button onClick={handleBackspace}>Backspace</button>
       <button onClick={() => setText('')}>Clear all</button>
